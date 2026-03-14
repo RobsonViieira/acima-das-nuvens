@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acima das Nuvens</title>
+<meta name="description" content="Só quem se arrisca merece viver o extraordinário.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="amb a1"></div>
+<div class="amb a2"></div>
+<div class="amb a3"></div>
+
+<!-- SETUP -->
+<div id="setupScreen" class="screen">
+  <div class="setup-wrap">
+    <div class="setup-logo">
+      <div class="logo-mark-lg">✈</div>
+      <h1 class="brand-title">Acima das Nuvens</h1>
+      <p class="brand-slogan">Só quem se arrisca merece viver o extraordinário</p>
+    </div>
+    <div class="setup-progress">
+      <div class="setup-progress-fill" id="setupFill"></div>
+    </div>
+    <div class="setup-card" id="setupCard">
+      <div class="setup-step-emoji" id="sEmoji"></div>
+      <div class="setup-step-q" id="sQuestion"></div>
+      <div id="sInput"></div>
+      <div class="setup-btns">
+        <button class="btn-back" id="btnBack" onclick="setupBack()">← Voltar</button>
+        <button class="btn-next" id="btnNext" onclick="setupNext()">Próximo →</button>
+      </div>
+    </div>
+    <div class="setup-tip" id="setupTip"></div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="appScreen" class="screen hidden">
+  <header class="hdr">
+    <div class="hdr-brand">
+      <span class="hdr-plane">✈</span>
+      <span class="hdr-name">Acima das Nuvens</span>
+    </div>
+    <div id="hdrCenter" class="hdr-center"></div>
+    <div class="hdr-right">
+      <div id="hdrBadge" class="countdown-badge"></div>
+      <button class="btn-ico" onclick="resetApp()" title="Recomeçar">↺</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="dash" onclick="goTab('dash')"><span>◈</span>Início</button>
+    <button class="tab" data-tab="meta" onclick="goTab('meta')"><span>◎</span>Meta</button>
+    <button class="tab" data-tab="gastos" onclick="goTab('gastos')"><span>◉</span>Gastos</button>
+    <button class="tab" data-tab="mala" onclick="goTab('mala')"><span>◌</span>Mala</button>
+    <button class="tab" data-tab="ia" onclick="goTab('ia')"><span>✦</span>IA</button>
+  </nav>
+
+  <main id="main" class="main"></main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
